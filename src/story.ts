@@ -151,21 +151,43 @@ export const STORY_NODES: Record<string, StoryNode> = {
   survey_q1: {
     id: 'survey_q1',
     title: 'Employee Satisfaction Survey - Q1',
-    description: 'Work-Life Balance: "My current workload and schedule allow me to maintain a healthy balance between my professional and personal life."',
+    description: '"All in all, I am satisfied with my job."',
     options: [
-      { label: 'Disagree', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 1 } }) },
-      { label: 'Neutral', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 3 } }) },
-      { label: 'Agree', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 5 } }) }
+      { label: 'Strongly disagree', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 1 } }) },
+      { label: 'Disagree', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 2 } }) },
+      { label: 'Slightly disagree', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 3 } }) },
+      { label: 'Neither agree nor disagree', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 4 } }) },
+      { label: 'Slightly agree', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 5 } }) },
+      { label: 'Agree', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 6 } }) },
+      { label: 'Strongly agree', next: 'survey_q2', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q1: 7 } }) }
     ]
   },
   survey_q2: {
     id: 'survey_q2',
     title: 'Employee Satisfaction Survey - Q2',
-    description: 'Growth and Development: "I feel that I have clear opportunities for professional growth and career advancement within this organization."',
+    description: '"In general, I don’t like my job."',
     options: [
-      { label: 'Disagree', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 1 } }) },
-      { label: 'Neutral', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 3 } }) },
-      { label: 'Agree', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 5 } }) }
+      { label: 'Strongly disagree', next: 'survey_q3', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 1 } }) },
+      { label: 'Disagree', next: 'survey_q3', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 2 } }) },
+      { label: 'Slightly disagree', next: 'survey_q3', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 3 } }) },
+      { label: 'Neither agree nor disagree', next: 'survey_q3', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 4 } }) },
+      { label: 'Slightly agree', next: 'survey_q3', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 5 } }) },
+      { label: 'Agree', next: 'survey_q3', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 6 } }) },
+      { label: 'Strongly agree', next: 'survey_q3', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q2: 7 } }) }
+    ]
+  },
+  survey_q3: {
+    id: 'survey_q3',
+    title: 'Employee Satisfaction Survey - Q3',
+    description: '"In general, I like working here."',
+    options: [
+      { label: 'Strongly disagree', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q3: 1 } }) },
+      { label: 'Disagree', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q3: 2 } }) },
+      { label: 'Slightly disagree', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q3: 3 } }) },
+      { label: 'Neither agree nor disagree', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q3: 4 } }) },
+      { label: 'Slightly agree', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q3: 5 } }) },
+      { label: 'Agree', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q3: 6 } }) },
+      { label: 'Strongly agree', next: 'mentor_ask', action: (state) => ({ surveyAnswers: { ...state.surveyAnswers, q3: 7 } }) }
     ]
   },
   mentor_ask: {
