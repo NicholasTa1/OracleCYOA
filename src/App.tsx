@@ -73,16 +73,17 @@ const App: React.FC = () => {
       <header className="sticky top-0 z-10 bg-oracle-dark text-white border-b-2 border-oracle-red shadow-lg">
         <div className="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-oracle-red rounded-lg shadow-[0_0_15px_rgba(199,70,52,0.4)]">
-              <Building2 className="w-6 h-6 text-white" />
+            <div className="p-2 bg-oracle-red rounded-lg shadow-[0_0_15px_rgba(199,70,52,0.4)] flex items-center justify-center">
+              {/* oval ring (empty middle) */}
+              <div className="w-9 h-5 rounded-full border-2 border-white bg-transparent" aria-hidden="true" />
             </div>
-            <div>
-              <h1 className="text-lg font-black tracking-tighter uppercase leading-none">Oracle</h1>
-              <div className="flex items-center gap-1.5 mt-0.5">
-                <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
-                <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Career_Sim_v2.4</span>
-              </div>
-            </div>
+             <div>
+               <h1 className="text-lg font-black tracking-tighter uppercase leading-none">Oracle</h1>
+               <div className="flex items-center gap-1.5 mt-0.5">
+                 <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                 <span className="text-[10px] font-mono text-gray-400 uppercase tracking-widest">Career_Sim_v2.4</span>
+               </div>
+             </div>
           </div>
           
           <div className="flex items-center gap-3 md:gap-4 text-xs font-mono">
